@@ -1,0 +1,57 @@
+type,korean,T1 Class KR,T1 Class English,T3 Korean,T3 English,sentence examples
+NNG,보통명사,보통명사,common noun,보통명사,common noun,
+NNP,고유명사,고유명사,proper noun,고유명사,proper noun,
+NNB,일반의존 명사,일반의존 명사,common dependent noun,일반의존 명사,common dependent noun,
+NNM,단위 의존 명사,단위 의존 명사,unit dependent noun,단위 의존 명사,unit dependent noun,
+NR,수사,수사,number/numbering,수사,number/numbering,
+NP,대명사 ,대명사 ,pronoun,대명사 ,pronoun,
+VV,동사,동사,verb,동사,verb,"가다, 먹다, 자다"
+VA,형용사,형용사,adjective verb,형용사,adjective verb,"귀엽다, 예쁘다, 노랗다, 둥글다, 있다, 같다"
+VXV,보조 동사,보조 동사,auxillary verb,보조 동사,auxillary verb,"-싶다, 보다"
+VXA,보조 형용사,보조 형용사,auxillary adjective,보조 형용사,auxillary adjective,
+VCP,"긍정 지정사, 서술격 조사 '이다'","긍정 지정사, 서술격 조사 '이다'",positive reference,"긍정 지정사, 서술격 조사 '이다'",positive reference,이다
+VCN,"부정 지정사, 형용사 '아니다'","부정 지정사, 형용사 '아니다'",negative reference,"부정 지정사, 형용사 '아니다'",negative reference,아니다
+MDN,수 관형사,관형사,Determiner,수 관형사,numeral determiner,
+MDT,일반 관형사,관형사,Determiner,일반 관형사,general determiner,
+MAG,일반 부사,부사,Adverb,일반 부사,common adverbs,
+MAC,접속 부사,부사,Adverb,접속 부사,conjunctive adverbs,
+IC,감탄사,감탄사,Interjection,감탄사,Interjection,
+JKS,주격 조사,조사,subject case marker,주격 조사,subject case marker,"바람이 분다, 소리가 들린다, 우리 학교에서 우승을 차지했다"
+JKC,보격 조사,조사,complement case-marker,보격 조사,complement case-marker,"그녀가 선생님이 되었다,  그는 남자가 아니다"
+JKG,관형격 조사,조사,adnominal case-marker ,관형격 조사,adnominal case-marker ,이 문장의 과형격 조사는 의이다 
+JKO,목적격 조사,조사,object marker,목적격 조사,object marker,"공부를 하라, 노력을 하라"
+JKM,부사격 조사,조사,adverbial case marker,부사격 조사,adverbial case marker,"바보에게 바보가, 집에서 공부하는게 좋다"
+JKI,호격 조사,조사,vocative marker,호격 조사,vocative marker,
+JKQ,인용격 조사,조사,quotational marker,인용격 조사,quotational marker,
+JC,접속 조사,조사,connecting particle,접속 조사,connecting particle,
+JX,보조사,조사,time-related/special case particles,보조사,time-related/special case particles,
+EPH,존칭 선어말 어미,어미,honorific ending,존칭 선어말 어미,honorific ending,
+EPT,시제 선어말 어미,어미,ending,시제 선어말 어미,exclamative/question endings,
+EPP,공손 선어말 어미,어미,ending,공손 선어말 어미,polite ending,
+EFN,평서형 종결 어미,어미,declarative ending,평서형 종결 어미,declarative ending,
+EFQ,의문형 종결 어미,어미,ending,의문형 종결 어미,an interrogative ending,
+EFO,명령형 종결 어미,어미,ending,명령형 종결 어미,imperative ending,
+EFA,청유형 종결 어미,어미,ending,청유형 종결 어미,conjugated form of request,
+EFI,감탄형 종결 어미,어미,ending,감탄형 종결 어미,exclamative ending,
+EFR,존칭형 종결 어미,어미,ending,존칭형 종결 어미,honorific final ending,
+ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
+ECS,보조적 연결 어미,어미,ending,보조적 연결 어미,auxillary connected ending,
+ECD,의존적 연결 어미,어미,ending,의존적 연결 어미,depended connected ending,
+ETN,명사형 전성 어미,어미,ending,명사형 전성 어미,noun-connected ending,
+ETD,관형형 전성 어미,어미,ending,관형형 전성 어미,the golden mother of the crown,
+XPN,체언 접두사,접두사,prefix,체언 접두사,a punctuation prefix,
+XPV,용언 접두사,접두사,prefix,용언 접두사,a colloquial prefix,
+XSN,명사파생 접미사,접미사,suffix,명사파생 접미사,a noun-derivative suffix,
+XSV,동사 파생 접미사,접미사,suffix,동사 파생 접미사,a verb derived suffix,
+XSA,형용사 파생 접미사,접미사,suffix,형용사 파생 접미사,an adjective derived suffix,
+XR,어근,어근,root words,어근,root words,
+SF,"마침표, 물음표, 느낌표",구두점 (ignore),punctuation (ignore),"마침표, 물음표, 느낌표","Period, question mark, exclamation mark",
+SE,줄임표,구두점 (ignore),punctuation (ignore),줄임표,ellipsis,
+SS,"따옴표,괄호표,줄표",구두점 (ignore),punctuation (ignore),"따옴표,괄호표,줄표","quotation marks, brackets, lines",
+SP,"쉼표,가운뎃점,콜론,빗금",구두점 (ignore),punctuation (ignore),"쉼표,가운뎃점,콜론,빗금","commas, colon, semi colon, slash",
+SO,"붙임표(물결,숨김,빠짐)",구두점 (ignore),punctuation (ignore),"붙임표(물결,숨김,빠짐)","Table attached (water seal, hiding, falling)",
+SW,"기타기호 (논리수학기호,화폐기호)",구두점 (ignore),other symbol (ignore),"기타기호 (논리수학기호,화폐기호)",Other symbol ,
+OH,한자,한자,hanja,한자,Chinese characters,
+OL,외국어,외국어,other language,외국어,Foreign language,
+ON,숫자,숫자,numbers,숫자,number,
+UN,명사추정범주,명사추정범주,nouns,명사추정범주,Category of nouns,
