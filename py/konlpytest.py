@@ -1,6 +1,8 @@
 from konlpy.tag import Kkma
+from konlpy.tag import Mecab
 from konlpy.utils import pprint
-import io
+import tossi 		
+import io		
 import pandas as pd
 
 #algo:
