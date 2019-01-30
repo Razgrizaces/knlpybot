@@ -1,7 +1,7 @@
 from konlpy.tag import Kkma
 from konlpy.utils import pprint
 import io
-import pandas
+import pandas as pd
 
 #algo:
 #nlp to levels with csv (O)
@@ -18,8 +18,8 @@ import pandas
 print("Loading KKMA...")
 kkma=Kkma()
 print("Done loading!")
-filename = "konlpytest.csv"
-sentence = '아 진짜요? 오늘 너무 힘들은거 같아요... 수고했어요~'
+filename = "..\\csvs\\konlpytest.csv"
+sentence = '발표 무사히 끝냈어요! 주말에 빈 회의실 가서 혼자 연습했어요 ㅠㅠ 청중역으로 인형 갖다두고 그거 보면서 연습하고 발표할때도 저건 사람이 아니라 인형이다 이러고 했습니다 ㅠㅠ'
 invalidTags = {"SF", "SE", "SS", "SP", "SO", "SW"}
 i = 0
 #create the csv
@@ -30,17 +30,23 @@ with io.open(filename, "w", encoding = "utf8") as f:
 		while j is not len(kkma.pos(kkma.sentences(sentence)[i])):
 			if kkma.pos(kkma.sentences(sentence)[i])[j][1] not in invalidTags:
 				f.write(kkma.pos(kkma.sentences(sentence)[i])[j][0])
-				f.write(", ")
+				f.write(",")
 				f.write(kkma.pos(kkma.sentences(sentence)[i])[j][1])
-				f.write(",\n")
+				f.write("\n")
 			j = j+1
 		i = i + 1
+	f.close()
 #csv created
-#
 
-cols = {"pos","korean","T1 Class KR","T1 Class English","T3 Korean","T3 English","sentence examples"}
-posCols = {"word", "pos")
+cols = ["pos","korean","T1 Class KR","T1 Class English","T3 Korean","T3 English","sentence examples"]
+posCols = ["word", "pos"]
 
 #create data frame from cols with nlp_to_level
+nlpDf = pd.read_csv("..\\csvs\\nlp_to_level.csv", names = cols)
+#create df using posCols with file from before
+posDf = pd.read_csv(filename, names= posCols)
 
-#create df using posCols with 
+#merge the dfs
+print(nlpDf)
+posDf = posDf.merge(nlpDf, on = ["pos"])
+posDf.to_csv("testdf.csv")
