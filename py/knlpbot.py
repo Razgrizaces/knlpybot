@@ -4,16 +4,34 @@ import logging
 import os
 import sys
 import urllib.request
+import json
+from discord.ext import commands
 
-TOKEN = 'NTM4MDQyNDg1MjE0MjgxNzQw.Dyy_dA.rtPj1GP_sKayM_3K3_3jR8magtI'
+#token handler
+with open("..\\..\\tokens.json") as f:
+	tokens = json.load(f)
+	f.close()
+
+TOKEN = tokens["tokens"]["bot-token"]
 client = discord.Client()
 
+bot = commands.Bot(command_prefix="!")
+
 @client.event
-async def papagoRequest(request, en, ko):
-	client_id = "cNG69MHtiwvlRqbBHSJK"
-	client_secret = "tTeMWZEjRT"
-	encText = urllib.parse.quote("Hi, I'm Tris.")
-	data = "source=" + "&target=_"+ "&text=" + encText
+async def papagoRequest(message, client, args):
+	client_id =  tokens["tokens"]["papago-id"]
+	client_secret = tokens["tokens"]["papago-token"]
+	languages = {'en', 'ko', 'zn-CH', 'zn-TW', 'ja', 'es', 'fr', 'vi', 'th', 'id', 'ge'}
+	dataIn = message.content()
+	splitData = dataIn.split(" ")
+	if splitData[1] not in languages and splitData[2] not in languages:
+		return "Incorrect input or output language.".format(message)
+	inLang = splitData[1]
+	outLang = splitData[2]
+	#get message part
+	encText = " ".join(splitData[3:])
+	data = "source=" + inLang + "&target="+ outLang + "&text=" + encText
+	print(data)
 	url = "https://openapi.naver.com/v1/papago/n2mt"
 	request = urllib.request.Request(url)
 	request.add_header("X-Naver-Client-Id",client_id)
@@ -22,13 +40,11 @@ async def papagoRequest(request, en, ko):
 	rescode = response.getcode()
 	if(rescode==200):
 		response_body = response.read()
-		print(response_body.decode('utf-8'))
+		responseJson = json.loads(response_body.decode('utf-8'))
+		responseMsg = responseJson['message']['result']['translatedText'].format(message)
+		return responseMsg
 	else:
-		print("Error Code:" + rescode)
-
-@client.event
-async def parseArguments(args):
-	str = args.split(" ")
+		return 'Papago Request Failed.'.format(message)
 
 @client.event
 async def test(message):
@@ -36,31 +52,44 @@ async def test(message):
 	await client.send_message(message.channel, msg)
 
 @client.event
-async def konlpy(message):
+async def konlpy(message, client, args):
 	msg = 'konlpy test **콜엔피우아이** {0.author.mention}'.format(message)
 	await client.send_message(message.channel, msg)
-
+ch.add_command({
+	'trigger': "!konlpy",
+	'function': konlpy,
+	'args_num': 0, #need at least one thing to translate
+	'args_name': [],
+	'description': "starts the nlp processor for konlpy"
+})	
 @client.event
-async def kill(message):
+async def kill(message, client, args):
 	await client.logout()
-
-	
+	return "Kill me".format(message)
+ch.add_command({
+	'trigger': "!kill",
+	'function': kill,
+	'args_num': 0, #need at least one thing to translate
+	'args_name': [],
+	'description': "this kills the bot"
+})	
 #main method of bot
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
 	if message.author == client.user:
 		return
-	if message.content.startswith('!'):
-		options = {
-			"hello": test(message),
-			"konlp": konlpy(message),
-			"stop": kill(message)
-		}
-		testmsg = message.content.split()
-		testmsg = (testmsg[0][1:]).strip()
-		#options.get(testmsg, "Invalid command.")
-
+	else:
+		# try to evaluate with the command handler
+		try:
+			bot.process_commands(message)
+		# message doesn't contain a command trigger
+		except TypeError as e:
+			pass
+		# generic python error
+		except Exception as e:
+			print(e)
+			
 @client.event
 async def on_ready():
     print('Logged in as')
