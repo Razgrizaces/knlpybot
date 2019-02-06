@@ -8,7 +8,7 @@ import json
 from discord.ext import commands
 
 #token handler
-with open("..\\..\\tokens.json") as f:
+with open("tokens.json") as f:
 	tokens = json.load(f)
 	f.close()
 
@@ -25,12 +25,18 @@ async def translate(ctx):
 	client_id =  tokens["tokens"]["papago-id"]
 	client_secret = tokens["tokens"]["papago-token"]
 	languages = {'en', 'ko', 'zn-CH', 'zn-TW', 'ja', 'es', 'fr', 'vi', 'th', 'id', 'ge'}
+	
 	splitData = dataIn.split(" ")
-	if splitData[1] not in languages and splitData[2] not in languages:
-		await client.send_message(ctx.message.channel, "Incorrect input or output language.")
+	try:
+		
+		if splitData[1] not in languages and splitData[2] not in languages:
+			await client.send_message(ctx.message.channel, ctx.message.author.mention + " Incorrect input or output language.")
+			return
+		inLang = splitData[1]
+		outLang = splitData[2]
+	except:
+		await client.send_message(ctx.message.channel, ctx.message.author.mention + " Incorrect input or output language.")
 		return
-	inLang = splitData[1]
-	outLang = splitData[2]
 	#get message part
 	encText = " ".join(splitData[3:])
 	data = "source=" + inLang + "&target="+ outLang + "&text=" + encText
