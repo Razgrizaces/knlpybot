@@ -1,49 +1,19 @@
-,word,pos,korean,T1 Class KR,T1 Class English,T3 Korean,T3 English,sentence examples
-0,발표,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-1,주말,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-2,회의실,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-3,혼자,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-4,연습,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-5,청중,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-6,역,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-7,인형,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-8,연습,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-9,발표,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-10,때,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-11,사람,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-12,인형,NNG,보통명사,보통명사,common noun,보통명사,common noun,
-13,무사히,MAG,일반 부사,부사,Adverb,일반 부사,common adverbs,
-14,끝내,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-15,빌,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-16,가,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-17,갖다두,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-18,보,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-19,저,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-20,이러,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-21,하,VV,동사,동사,verb,동사,verb,가다; 먹다; 자다
-22,었,EPT,시제 선어말 어미,어미,past tense ending,시제 선어말 어미,exclamative/question endings,
-23,었,EPT,시제 선어말 어미,어미,past tense ending,시제 선어말 어미,exclamative/question endings,
-24,었,EPT,시제 선어말 어미,어미,past tense ending,시제 선어말 어미,exclamative/question endings,
-25,어요,EFN,평서형 종결 어미,어미,declarative ending,평서형 종결 어미,declarative ending,
-26,어요,EFN,평서형 종결 어미,어미,declarative ending,평서형 종결 어미,declarative ending,
-27,다,EFN,평서형 종결 어미,어미,declarative ending,평서형 종결 어미,declarative ending,
-28,습니다,EFN,평서형 종결 어미,어미,declarative ending,평서형 종결 어미,declarative ending,
-29,에,JKM,부사격 조사,조사,adverbial case marker,부사격 조사,adverbial case marker,바보에게 바보가; 집에서 공부하는게 좋다
-30,으로,JKM,부사격 조사,조사,adverbial case marker,부사격 조사,adverbial case marker,바보에게 바보가; 집에서 공부하는게 좋다
-31,ㄴ,ETD,관형형 전성 어미,어미,ending,관형형 전성 어미,the golden mother of the crown,
-32,ㄹ,ETD,관형형 전성 어미,어미,ending,관형형 전성 어미,the golden mother of the crown,
-33,아서,ECD,의존적 연결 어미,어미,ending,의존적 연결 어미,depended connected ending,
-34,라,ECD,의존적 연결 어미,어미,ending,의존적 연결 어미,depended connected ending,
-35,하,XSV,동사 파생 접미사,접미사,suffix,동사 파생 접미사,a verb derived suffix,
-36,하,XSV,동사 파생 접미사,접미사,suffix,동사 파생 접미사,a verb derived suffix,
-37,하,XSV,동사 파생 접미사,접미사,suffix,동사 파생 접미사,a verb derived suffix,
-38,고,ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
-39,면서,ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
-40,고,ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
-41,건,ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
-42,고,ECE,대등 연결 어미,어미,ending,대등 연결 어미,surbordinate ending,
-43,그거,NP,대명사,대명사,pronoun,대명사,pronoun,
-44,도,JX,보조사,조사,time-related/special case particles,보조사,time-related/special case particles,
-45,이,JKC,보격 조사,조사,complement case-marker,보격 조사,complement case-marker,그녀가 선생님이 되었다;  그는 남자가 아니다
-46,아니,VCN,부정 지정사,형용사 '아니다',부정 지정사,형용사 '아니다',negative reference,아니다
-47,이,VCP,긍정 지정사,서술격 조사 '이다',긍정 지정사,서술격 조사 '이다',positive reference,이다
+,pos,korean
+0,안녀,Noun
+1,하세요,Verb
+2,,
+3,저,Noun
+4,는,Josa
+5,트리스,Noun
+6,예요,Josa
+7,ㅋㅋㅋㅋㅋ,KoreanParticle
+8,저,Noun
+9,는,Josa
+10,뉴욕,Noun
+11,에,Josa
+12,살아요,Verb
+13,.,Punctuation
+14,만나서,Verb
+15,반,Noun
+16,사습니다,Verb
+17,~,Punctuation
